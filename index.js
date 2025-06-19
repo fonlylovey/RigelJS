@@ -1,2 +1,2 @@
-import UE from 'UEAPI.js';
+import UE from './UEAPI.js';
 export default UE;
