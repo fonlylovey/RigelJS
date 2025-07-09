@@ -1,7 +1,7 @@
 
 export class UE
 {
-    //{Name:SetWeather,"Param": any}
+    //
     static EmitMessage(jsonObject)
     {
         window.ps.emitMessage(jsonObject);
