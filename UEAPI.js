@@ -1,17 +1,23 @@
 
 import WebUI from "./WebUI.js";
 
-const StreamMode = {WEBUI: 0, PEERSTREAM: 1};
+
 
 export default class UE
 {
-    
-    static UseStreamMode = StreamMode.PEERSTREAM;
+    static StreamMode = {WEBUI: 0, PEERSTREAM: 1};
+
+    static UseStreamMode = UE.StreamMode.PEERSTREAM;
 
     //在像素流页面初始化的时候必须调用，确定使用什么模式
     static SetStreamMode(Mode)
     {
-        UseStreamMode = Mode;
+        UE.UseStreamMode = Mode;
+    }
+
+    static GetStreamMode()
+    {
+        return UE.UseStreamMode;
     }
 
     //peer 发送消息
